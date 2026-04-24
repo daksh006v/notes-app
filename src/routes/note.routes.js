@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { createNote, bulkCreateNotes, getAllNotes, getNoteById, replaceNote, updateNote } = require("../controllers/note.controller");
+const { createNote, bulkCreateNotes, getAllNotes, getNoteById, replaceNote, updateNote, deleteNote } = require("../controllers/note.controller");
 
 // POST /api/notes — Create a single note
 router.post("/", createNote);
@@ -19,5 +19,8 @@ router.put("/:id", replaceNote);
 
 // PATCH /api/notes/:id — Update specific fields only
 router.patch("/:id", updateNote);
+
+// DELETE /api/notes/:id — Delete a single note
+router.delete("/:id", deleteNote);
 
 module.exports = router;
