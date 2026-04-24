@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const noteController = require("../controllers/note.controller");
+const { createNote } = require("../controllers/note.controller");
 
-// Routes will be added per endpoint
+// POST /api/notes — Create a single note
+router.post("/", createNote);
 
 module.exports = router;
