@@ -2,7 +2,7 @@
 
 A clean, structured **REST API** built with **Node.js**, **Express**, and **MongoDB (Mongoose)** for full CRUD management of notes. Follows MVC architecture with proper HTTP methods, status codes, and consistent response formatting.
 
-> 🚀 **Live API:** `<!-- ADD YOUR DEPLOYMENT LINK HERE -->`
+> 🚀 **Live API:** `https://notes-app-x8s0.onrender.com`
 
 ---
 
