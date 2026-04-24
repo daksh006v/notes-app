@@ -1,6 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const { createNote, bulkCreateNotes, getAllNotes, getNoteById, replaceNote, updateNote, deleteNote } = require("../controllers/note.controller");
+const {
+  createNote,
+  bulkCreateNotes,
+  getAllNotes,
+  getNoteById,
+  replaceNote,
+  updateNote,
+  deleteNote,
+  bulkDeleteNotes,
+} = require("../controllers/note.controller");
 
 // POST /api/notes — Create a single note
 router.post("/", createNote);
@@ -10,6 +19,9 @@ router.post("/bulk", bulkCreateNotes);
 
 // GET /api/notes — Get all notes
 router.get("/", getAllNotes);
+
+// DELETE /api/notes/bulk — Delete multiple notes (MUST be before /:id)
+router.delete("/bulk", bulkDeleteNotes);
 
 // GET /api/notes/:id — Get a single note by ID
 router.get("/:id", getNoteById);
